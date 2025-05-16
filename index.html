@@ -1,131 +1,353 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Siivouspalvelu Moppinen | Ammattimainen siivous</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moppinen - Ammattimainen siivouspalvelu</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Oma CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="hero">
-  <header>
-    <div class="header-content">
-      <h1>Siivouspalvelu Moppinen</h1>
-      <p class="tagline">Puhtaasti kotimainen siivouspalvelu ✨</p>
-      <a href="#contact" class="cta-button">Pyydä tarjous</a>
-    </div>
-  </header>
-</div>
-
-<main>
-  <section class="about">
-    <div class="container">
-      <h2><i class="fas fa-sparkle"></i> Tietoa meistä</h2>
-      <div class="content-box">
-        <p>
-          Siivouspalvelu Moppinen on kotimainen, luotettava ja laadukas siivousalan yritys, joka tarjoaa yksilöllisiä ja asiakaslähtöisiä siivousratkaisuja koteihin, toimistoihin ja liiketiloihin.
-        </p>
-        <p>
-          Meille siivous ei ole vain työtä – se on ammattiylpeyttä, tarkkuutta ja aitoa halua helpottaa asiakkaidemme arkea. 🧽💪
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="services">
-    <div class="container">
-      <h2><i class="fas fa-broom"></i> Palvelut</h2>
-      <div class="service-grid">
-        <div class="service-card">
-          <i class="fas fa-home"></i>
-          <h3>Loppusiivous</h3>
-          <p>Täydellinen siivous muuttoa tai remonttia seuraavaksi</p>
+    <!-- Hero-osio siivouskuvan taustalla -->
+    <header class="hero-section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <span class="fw-bold">MOPPINEN</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Etusivu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#palvelut">Palvelut</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hinnasto">Hinnasto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#yhteys">Yhteys</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="hero-content text-white py-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Ammattimaiset siivouspalvelut</h1>
+                        <p class="lead mb-4">Jätä siivous ammattilaisille - me huolehdimme kodistasi tai yrityksestäsi, jotta sinulla on aikaa keskittyä tärkeämpiin asioihin.</p>
+                        <a href="#yhteys" class="btn btn-primary btn-lg custom-btn">Pyydä tarjous</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="service-card">
-          <i class="fas fa-building"></i>
-          <h3>Toimistosiivous</h3>
-          <p>Ammattimainen siivous työtiloihin</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-calendar-week"></i>
-          <h3>Viikottainen siivous</h3>
-          <p>Säännöllinen siivous pitää tilasi puhtaana</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="pricing">
-    <div class="container">
-      <h2><i class="fas fa-tag"></i> Hinnasto</h2>
-      <div class="price-box">
-        <div class="price-card">
-          <h3>Tuntiveloitus</h3>
-          <p class="price">45 €<span>/h</span></p>
-          <p class="vat">sis. ALV 24%</p>
-          <ul>
-            <li><i class="fas fa-check"></i> Minimiveloitus 3 tuntia</li>
-            <li><i class="fas fa-check"></i> Kaikki materiaalit sisältyvät</li>
-            <li><i class="fas fa-check"></i> Ei piilokuluja</li>
-          </ul>
+    <!-- Palvelut-osio -->
+    <section id="palvelut" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Palvelumme</h2>
+                <p class="section-subtitle">Laadukkaat siivousratkaisut juuri sinun tarpeisiisi</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary mb-4">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3 class="h5">Kotisiivous</h3>
+                            <p>Perussiivous, syväsiivous ja siistiyttäminen kodeissa ja asunnoissa.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary mb-4">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3 class="h5">Toimitilasiivous</h3>
+                            <p>Yritysten ja toimistojen säännöllinen siivous sekä erikoissiivoukset.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary mb-4">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <h3 class="h5">Muuttosiivous</h3>
+                            <p>Laajat muuttosiivoukset, jotka täyttävät vuokranantajien vaatimukset.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="price-card highlight">
-          <h3>Kotitalousvähennys</h3>
-          <p class="price">18 €<span>/h</span></p>
-          <p class="vat">sis. ALV 24%</p>
-          <ul>
-            <li><i class="fas fa-check"></i> Kotitalousvähennyksen jälkeen</li>
-            <li><i class="fas fa-check"></i> Edullisempi hinta</li>
-          </ul>
+    </section>
+
+    <!-- Hinnasto-osio -->
+    <section id="hinnasto" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Hinnasto</h2>
+                <p class="section-subtitle">Kilpailukykyiset hinnat laadukkaasta työstä</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card pricing-card border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="h5 mb-0">Perussiivous</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="price mb-3">
+                                <span class="currency">€</span>
+                                <span class="amount">25</span>
+                                <span class="period">/h</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Pölyjen pyyhintä</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Lattioiden pesu</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Pintojen putsaus</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Roskausten vienti</li>
+                            </ul>
+                            <a href="#yhteys" class="btn btn-outline-primary w-100 custom-btn">Tilaa</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card pricing-card border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="h5 mb-0">Syväsiivous</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="price mb-3">
+                                <span class="currency">€</span>
+                                <span class="amount">35</span>
+                                <span class="period">/h</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Kaikki perussiivoukset</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Kalusteiden siirto ja siivous</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> ikkunoiden pesu</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Kaikkien pintojen desinfiointi</li>
+                            </ul>
+                            <a href="#yhteys" class="btn btn-outline-primary w-100 custom-btn">Tilaa</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card pricing-card border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="h5 mb-0">Muuttosiivous</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="price mb-3">
+                                <span class="currency">€</span>
+                                <span class="amount">250</span>
+                                <span class="period">/kohde</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Kaikki syväsiivoukset</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Kaappien ja laatikoiden pesu</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Uunin ja jääkaapin puhdistus</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Vuokranantajan hyväksymä</li>
+                            </ul>
+                            <a href="#yhteys" class="btn btn-outline-primary w-100 custom-btn">Tilaa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2><i class="fas fa-envelope"></i> Ota yhteyttä</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Yhteystiedot</h3>
-          <p><i class="fas fa-phone"></i> 040 460 0950</p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:siivouspalvelumoppinen@gmail.com">siivouspalvelumoppinen@gmail.com</a></p>
-          <p><i class="fas fa-clock"></i> Toimisto avoinna:<br>Ma–Pe klo 10.00–17.00</p>
+    <!-- Yhteysosio -->
+    <section id="yhteys" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="section-title mb-4">Ota yhteyttä</h2>
+                    <p class="mb-4">Täytä lomake ja lähetä meille tarjouspyyntö. Otamme sinuun yhteyttä mahdollisimman pian.</p>
+                    
+                    <div class="contact-info">
+                        <div class="d-flex mb-3">
+                            <div class="icon-box bg-primary me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="h6 mb-0">Toimipiste</h5>
+                                <p class="mb-0">Siivouskatu 12, 00100 Helsinki</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="icon-box bg-primary me-3">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="h6 mb-0">Puhelin</h5>
+                                <p class="mb-0">+358 40 123 4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="icon-box bg-primary me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="h6 mb-0">Sähköposti</h5>
+                                <p class="mb-0">moppinen@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="contact-form bg-white p-4 shadow-sm">
+                        <h3 class="h5 mb-4">Tarjouspyyntö</h3>
+                        <form id="contactForm" action="https://formspree.io/f/moppinen@gmail.com" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nimi *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Sähköposti *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="address" class="form-label">Osoite *</label>
+                                    <input type="text" class="form-control" id="address" name="address" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="rooms" class="form-label">Huoneiden määrä *</label>
+                                    <select class="form-select" id="rooms" name="rooms" required>
+                                        <option value="" selected disabled>Valitse</option>
+                                        <option value="1">1 huone</option>
+                                        <option value="2">2 huonetta</option>
+                                        <option value="3">3 huonetta</option>
+                                        <option value="4">4 huonetta</option>
+                                        <option value="5+">5+ huonetta</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="size" class="form-label">Asuinneliöt *</label>
+                                    <input type="number" class="form-control" id="size" name="size" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="service" class="form-label">Palvelu *</label>
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="" selected disabled>Valitse palvelu</option>
+                                        <option value="perussiivous">Perussiivous</option>
+                                        <option value="syvasiivous">Syväsiivous</option>
+                                        <option value="muuttosiivous">Muuttosiivous</option>
+                                        <option value="toimitilasiivous">Toimitilasiivous</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="date" class="form-label">Toivottu siivouspäivä *</label>
+                                    <input type="date" class="form-control" id="date" name="date" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Lisätiedot</label>
+                                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 custom-btn">Lähetä tarjouspyyntö</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <form class="contact-form" action="#" method="POST">
-          <input type="text" name="name" placeholder="Nimesi" required />
-          <input type="email" name="email" placeholder="Sähköpostisi" required />
-          <input type="tel" name="phone" placeholder="Puhelinnumerosi" />
-          <textarea name="message" rows="5" placeholder="Viestisi" required></textarea>
-          <button type="submit">Lähetä viesti <i class="fas fa-paper-plane"></i></button>
-        </form>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <h3>Siivouspalvelu Moppinen</h3>
-        <p>Puhtautta ja ammattitaitoa</p>
-      </div>
-      <div class="footer-links">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-    <div class="copyright">
-      &copy; 2025 Siivouspalvelu Moppinen. Kaikki oikeudet pidätetään.
-    </div>
-  </div>
-</footer>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="h5">Moppinen</h3>
+                    <p class="mb-0">Ammattimaiset siivouspalvelut kodeille ja yrityksille.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="h5">Linkit</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Etusivu</a></li>
+                        <li class="mb-2"><a href="#palvelut" class="text-white text-decoration-none">Palvelut</a></li>
+                        <li class="mb-2"><a href="#hinnasto" class="text-white text-decoration-none">Hinnasto</a></li>
+                        <li><a href="#yhteys" class="text-white text-decoration-none">Yhteys</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h5">Yhteystiedot</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Siivouskatu 12, Helsinki</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> +358 40 123 4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> moppinen@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Moppinen. Kaikki oikeudet pidätetään.</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Oma JS -->
+    <script>
+        // Lomakkeen lähetys
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Kiitos yhteydenotostasi! Otamme sinuun yhteyttä mahdollisimman pian.');
+                    form.reset();
+                } else {
+                    throw new Error('Lomakkeen lähetys epäonnistui');
+                }
+            })
+            .catch(error => {
+                alert('Jotain meni pieleen. Yritä uudelleen myöhemmin.');
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
