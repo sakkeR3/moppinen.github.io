@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moppinen | Ammattimaiset siivouspalvelut</title>
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -28,7 +25,7 @@
             overflow-x: hidden;
         }
         
-        /* Hero section with local image */
+       
         .hero-section {
             background: 
                 linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -41,7 +38,7 @@
             padding-top: 80px;
         }
 
-        /* Modern navbar */
+       
         .navbar {
             transition: all 0.3s ease;
             padding: 1rem 0;
@@ -71,7 +68,7 @@
             color: var(--white) !important;
         }
         
-        /* Button styles */
+     
         .btn-orange {
             background-color: var(--orange);
             border-color: var(--orange);
@@ -89,7 +86,7 @@
             box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
         }
         
-        /* Card styles */
+        
         .service-card {
             border: none;
             border-radius: 12px;
@@ -116,7 +113,51 @@
             margin-bottom: 1.5rem;
         }
         
-        /* Section styles */
+      
+        .pricing-card {
+            border: 2px solid var(--light-blue);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--orange);
+            position: relative;
+            overflow: hidden;
+            transform: scale(1.05);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background-color: var(--orange);
+            color: var(--white);
+            padding: 0.25rem 2rem;
+            transform: rotate(45deg);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+      
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--orange);
+        }
+        
+        .testimonial-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--primary-blue);
+        }
+        
+       
         .section {
             padding: 5rem 0;
             position: relative;
@@ -139,10 +180,42 @@
             background-color: var(--orange);
             border-radius: 2px;
         }
+        
+        .bg-light-blue {
+            background-color: var(--light-blue);
+        }
+        
+      
+        .contact-form {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary-blue);
+        }
+        
+        .form-control, .form-select {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 0.25rem rgba(26, 86, 219, 0.1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .hero-section {
+                text-align: center;
+                padding-top: 100px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -163,6 +236,9 @@
                         <a class="nav-link" href="#pricing">Hinnasto</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Arvostelut</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Yhteys</a>
                     </li>
                 </ul>
@@ -171,7 +247,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section with local image -->
+
     <section class="hero-section">
         <div class="container">
             <div class="row">
@@ -189,7 +265,7 @@
                             <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle border border-3 border-white ms-n2" width="40" height="40">
                         </div>
                         <div class="ms-3">
-                            <div class="fw-bold">500+ tyytyväistä asiakasta</div>
+                            <div class="fw-bold">Satoja tyytyväisiä asiakkaita</div>
                             <div class="small">Helsingin paras siivouspalvelu</div>
                         </div>
                     </div>
@@ -198,7 +274,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    
     <section id="services" class="section">
         <div class="container">
             <div class="row justify-content-center mb-5">
@@ -216,7 +292,7 @@
                             <i class="fas fa-home"></i>
                         </div>
                         <h3 class="h5 fw-bold mb-3">Kotisiivous</h3>
-                        <p class="text-muted mb-4">Perussiivous, syväsiivous ja siistiyttäminen kodeissa ja asunnoissa.</p>
+                        <p class="text-muted mb-4">Perussiivous asunnoissa.</p>
                         <ul class="list-unstyled mb-4">
                             <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Pölyjen pyyhintä</li>
                             <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Lattioiden pesu</li>
@@ -236,7 +312,7 @@
                         <ul class="list-unstyled mb-4">
                             <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Toimistotilojen siivous</li>
                             <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Kokoustilojen valmistelu</li>
-                            <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Lattioiden hionta ja parketisointi</li>
+                            <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Lattioiden vahaus</li>
                         </ul>
                         <a href="#contact" class="btn btn-outline-primary w-100">Lue lisää</a>
                     </div>
@@ -252,7 +328,7 @@
                         <ul class="list-unstyled mb-4">
                             <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Kaappien ja laatikoiden pesu</li>
                             <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Uunin ja jääkaapin puhdistus</li>
-                            <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Vuokranantajan hyväksymä</li>
+                            <li class="mb-2"><i class="fas fa-check text-orange me-2"></i> Vuokranantajan listan mukaisesti</li>
                         </ul>
                         <a href="#contact" class="btn btn-outline-primary w-100">Lue lisää</a>
                     </div>
@@ -261,7 +337,170 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    
+    <section id="pricing" class="section bg-light-blue">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title mb-4">Hinnasto</h2>
+                    <p class="text-muted">Kilpailukykyiset hinnat ammattimaisesta siivouksesta</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+               
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="h5 mb-0">Perussiivous</h3>
+                            <p class="mb-0 small">Asiakkaan tarvikkeilla</p>
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <div class="price mb-4">
+                                <span class="display-4 fw-bold">45€</span>
+                            </div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Vessan siivous</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Pintojen pyyhintä</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Tasojen puhdistus</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Lattioiden pesu</li>
+                                <li class="mb-2"><i class="fas fa-times text-muted me-2"></i> Ikkunoiden pesu</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-primary w-100">Valitse</a>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm popular">
+                        <div class="popular-badge">Suosituin</div>
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="h5 mb-0">Laajennettu siivous</h3>
+                            <p class="mb-0 small">Meidän tarvikkeilla</p>
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <div class="price mb-4">
+                                <span class="display-4 fw-bold">55€</span>
+                            </div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Kaikki perussiivoukset</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Ikkunoiden pesu</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Jääkaapin puhdistus</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Hellan/uunin pesu</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Meidät tarvikkeilla</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Valitse</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="h5 mb-0">Muuttosiivous</h3>
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <div class="price mb-4">
+                                <span class="display-4 fw-bold">255€</span>
+                            </div>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Syväsiivous</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Kaappien pesu</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Uunin puhdistus</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Ikkunoiden pesu</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Vuokranantajan hyväksymä</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-primary w-100">Valitse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="text-muted">* Hinnat sisältävät ALV 25,5%</p>
+                <a href="#contact" class="btn btn-orange mt-3">Pyydä tarkempi tarjous</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="text-orange fw-bold">ARVOSTELUT</span>
+                    <h2 class="section-title mb-4">Asiakkaamme sanovat</h2>
+                    <p class="text-muted">Lue mitä asiakkaamme sanovat palveluistamme</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0 fw-bold">Anna K.</h5>
+                                <small class="text-muted">Helsinki</small>
+                                <div class="mt-1 text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Moppinen hoiti muuttosiivouksen täydellisesti. Asunto oli täysin vuokranantajan vaatimusten mukainen ja siisteys oli erinomainen."</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0 fw-bold">Matti V.</h5>
+                                <small class="text-muted">Espoo</small>
+                                <div class="mt-1 text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Toimistomme siivous on ollut Moppisen hoidossa jo vuoden. Aina täsmällisiä, luotettavia ja siisteys on ollut priimaa."</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0 fw-bold">Liisa P.</h5>
+                                <small class="text-muted">Vantaa</small>
+                                <div class="mt-1 text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Tilaan säännöllisesti kotisiivousta. Siivooja on aina ystävällinen ja ammattitaitoinen. Kodista tulee oikeasti siisti!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <section id="contact" class="section bg-light-blue">
         <div class="container">
             <div class="row">
@@ -307,7 +546,7 @@
                 </div>
                 
                 <div class="col-lg-7">
-                    <div class="bg-white p-4 p-lg-5 rounded-3 shadow-sm">
+                    <div class="contact-form">
                         <h3 class="h4 fw-bold mb-4">Tarjouspyyntö</h3>
                         <form id="contactForm" action="https://formspree.io/f/moppinen@gmail.com" method="POST">
                             <div class="row g-3">
@@ -343,7 +582,7 @@
                                     <select class="form-select" id="service" name="service" required>
                                         <option value="" selected disabled>Valitse palvelu</option>
                                         <option value="perussiivous">Perussiivous</option>
-                                        <option value="syvasiivous">Syväsiivous</option>
+                                        <option value="laajennettu-siivous">Laajennettu siivous</option>
                                         <option value="muuttosiivous">Muuttosiivous</option>
                                         <option value="toimitilasiivous">Toimitilasiivous</option>
                                     </select>
@@ -367,7 +606,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+   
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row g-4">
@@ -413,10 +652,10 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS -->
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Navbar scroll effect
+      
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
@@ -426,7 +665,6 @@
             }
         });
         
-        // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
